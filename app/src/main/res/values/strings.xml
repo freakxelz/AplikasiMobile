@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Aplikasi Mobile</string>
+    <string name="tEmail">Masukkan Email</string>
+    <string name="tPassword">Masukkan Password</string>
+    <string name="bSignIn">Sign In</string>
+    <string-array name="emailUser">
+        <item>email1@mail.com</item>
+        <item>email2@mail.com</item>
+        <item>email3@mail.com</item>
+        <item>email4@mail.com</item>
+    </string-array>
+    <string-array name="passUser">
+        <item>email1</item>
+        <item>email2</item>
+        <item>email3</item>
+        <item>email4</item>
+    </string-array>
+</resources>
