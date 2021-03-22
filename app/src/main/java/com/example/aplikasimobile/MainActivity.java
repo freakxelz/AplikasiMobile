@@ -33,16 +33,38 @@ public class MainActivity extends AppCompatActivity {
                 String myUsername = edEmail.getText().toString();
                 String myPassword = edPassword.getText().toString();
 
-                for (int i = 0; i < user.length; i++) {
-                    if (user[i].equals(myUsername) && pass[i].equals(myPassword)) {
-                        Toast.makeText(MainActivity.this,"Login Berhasil",Toast.LENGTH_LONG).show();
-                        found = true;
-                        break;
-                    }
-                }
+                if (myUsername.isEmpty() || myPassword.isEmpty()){
 
-                if (!found) {
-                    Toast.makeText(MainActivity.this,"Email atau Password Salah",Toast.LENGTH_LONG).show();
+                    Toast t = Toast.makeText(getApplicationContext(),
+                            "Email dan Password harus diisi!",
+                            Toast.LENGTH_LONG);
+
+                    t.show();
+                }else {
+                    for (int i = 0; i < user.length; i++) {
+                        if (user[i].equals(myUsername) && pass[i].equals(myPassword)) {
+                            Toast.makeText(MainActivity.this,
+                                    "Login Berhasil",
+                                    Toast.LENGTH_LONG).show();
+                            found = true;
+
+                            Bundle b = new Bundle();
+                            b.putString("email", myUsername.trim());
+                            b.putString("pass", myPassword.trim());
+
+                            Intent in = new Intent(getApplicationContext(), ProfileActivity.class);
+
+                            in .putExtras(b);
+
+                            startActivity(in);
+
+                            break;
+                        }
+                    }
+
+                    if (!found) {
+                        Toast.makeText(MainActivity.this,"Email atau Password Salah",Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
