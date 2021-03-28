@@ -7,6 +7,8 @@
     <string name="infoEmail">Email Anda: </string>
     <string name="infoPass">Password Anda: </string>
     <string name="label2">Info Profile</string>
+
+<!--    User Email & Pass-->
     <string-array name="emailUser">
         <item>email1@mail.com</item>
         <item>email2@mail.com</item>
@@ -14,9 +16,25 @@
         <item>email4@mail.com</item>
     </string-array>
     <string-array name="passUser">
-        <item>email1</item>
-        <item>email2</item>
-        <item>email3</item>
-        <item>email4</item>
+        <item>pass1</item>
+        <item>pass2</item>
+        <item>pass3</item>
+        <item>pass4</item>
     </string-array>
+
+    <!--Item Menu-->
+    <string name="mDaftar">Pendaftaran</string>
+
+<!--Pendaftaran-->
+    <string name="IdDaftar">Daftar</string>
+    <string name="labelNama">Nama Lengkap</string>
+    <string name="labelEmail">Alamat Email</string>
+    <string name="labelAlamat">Alamat</string>
+    <string name="labelPass">Masukkan Password</string>
+    <string name="labelKonfPass">Konfirmasi Password</string>
+    <string name="eNama">Masukkan Nama</string>
+    <string name="eEmail">Masukkan Email</string>
+    <string name="ePass">Masukkan Password</string>
+    <string name="erePass">Konfirmasi Password</string>
+    <string name="eAlamat">Masukkan Alamat</string>
 </resources>

@@ -1,8 +1,11 @@
 package com.example.aplikasimobile;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.os.Bundle;
 import android.widget.Button;
@@ -15,12 +18,29 @@ public class MainActivity extends AppCompatActivity {
     Button btnSignIn;
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.mnDaftar){
+            Intent i = new Intent(getApplicationContext(), SignUpActivity.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final String[] user = getResources().getStringArray(R.array.emailUser);
-        final String[] pass = getResources().getStringArray(R.array.passUser);
+        final String[] user = getResources().
+                getStringArray(R.array.emailUser);
+        final String[] pass = getResources().
+                getStringArray(R.array.passUser);
 
         btnSignIn = findViewById(R.id.btnSigIn);
         edEmail = findViewById(R.id.edEmail);
@@ -42,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
                     t.show();
                 }else {
                     for (int i = 0; i < user.length; i++) {
-                        if (user[i].equals(myUsername) && pass[i].equals(myPassword)) {
+                        if (user[i].equals(myUsername) &&
+                                pass[i].equals(myPassword)) {
                             Toast.makeText(MainActivity.this,
                                     "Login Berhasil",
                                     Toast.LENGTH_LONG).show();
@@ -52,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
                             b.putString("email", myUsername.trim());
                             b.putString("pass", myPassword.trim());
 
-                            Intent in = new Intent(getApplicationContext(), ProfileActivity.class);
+                            Intent in = new Intent(getApplicationContext(),
+                                    ProfileActivity.class);
 
                             in .putExtras(b);
 
@@ -63,7 +85,9 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     if (!found) {
-                        Toast.makeText(MainActivity.this,"Email atau Password Salah",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this,
+                                "Email atau Password Salah",
+                                Toast.LENGTH_LONG).show();
                     }
                 }
             }
