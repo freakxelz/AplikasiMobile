@@ -8,7 +8,7 @@
     <string name="infoPass">Password Anda: </string>
     <string name="label2">Info Profile</string>
 
-<!--    User Email & Pass-->
+    <!--    User Email & Pass-->
     <string-array name="emailUser">
         <item>email1@mail.com</item>
         <item>email2@mail.com</item>
@@ -25,7 +25,7 @@
     <!--Item Menu-->
     <string name="mDaftar">Pendaftaran</string>
 
-<!--Pendaftaran-->
+    <!--Pendaftaran-->
     <string name="IdDaftar">Daftar</string>
     <string name="labelNama">Nama Lengkap</string>
     <string name="labelEmail">Alamat Email</string>
@@ -38,4 +38,14 @@
     <string name="erePass">Konfirmasi Password</string>
     <string name="eAlamat">Masukkan Alamat</string>
     <string name="textview">TextView</string>
+
+    <!--    Pop Up Menu-->
+    <string name="lihatData">Lihat Data</string>
+    <string name="editData">Edit Data</string>
+    <string name="dataKontak">Data Kontak</string>
+    <string name="namaItem">Nama Item</string>
+    <string name="detailKontak">Detail Kontak</string>
+    <string name="nama">Nama</string>
+    <string name="noTelp">Nomor Telepon</string>
+
 </resources>
